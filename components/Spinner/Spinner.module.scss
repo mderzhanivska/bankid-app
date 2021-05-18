@@ -1,0 +1,98 @@
+@import "../../styles/colors";
+@import "../../styles/media";
+
+.spinnerBoxContainer {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 50px);
+  z-index: 300;
+  transform: translateX(-50%);
+
+  
+  @media #{$phone} {
+    top: calc(50% + 25px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+
+  div {
+    border-color: $blue;
+    background-color: $blue;
+  }
+}
+
+.boxOne,
+.boxTwo,
+.boxThree,
+.boxFour {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  height: 20px;
+  width: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.boxOne {
+  animation: anim1 3s linear infinite;
+}
+.boxTwo {
+  animation: anim2 3s linear infinite;
+}
+.boxThree {
+  animation: anim3 3s linear infinite;
+}
+.boxFour {
+  animation: anim4 3s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: rotate(360deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: rotate(270deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+  }
+}
+@keyframes anim3 {
+  0% {
+    transform: rotate(180deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(-180deg);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes anim4 {
+  0% {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(-270deg);
+    transform-origin: bottom right;
+  }
+}

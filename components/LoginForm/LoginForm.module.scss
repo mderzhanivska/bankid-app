@@ -1,0 +1,309 @@
+@import "../../styles/colors";
+
+.formWrapper {
+  // padding-top: 40px;
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+    bottom: 0;
+    left: 0;
+  }
+
+  label {
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  input {
+    padding: 5px 2px;
+    color: $black;
+    border: 0;
+    outline: 0;
+    height: 35px;
+    background: transparent;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .error {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    color: red;
+    transform: translate(-50%);
+  }
+}
+
+.otpField {
+  padding-top: 20px;
+  max-width: 250px;
+  margin: 0 auto;
+
+  &:after {
+    background-color: transparent;
+  }
+
+  label {
+    text-align: center;
+  }
+
+  input {
+    height: 40px;
+    border: 1px solid $blue;
+    border-radius: 3px;
+    text-align: center;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.submit {
+  margin: 30px auto;
+  background: linear-gradient(90deg, #0096d6 0%, #77dff9 100%);
+  border-radius: 10px;
+  width: 262px;
+  height: 60px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  line-height: 23px;
+  color: $white;
+
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}
+
+.reject {
+  margin: 10px auto;
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid $black;
+  width: 262px;
+  height: 60px;
+  outline: 0;
+  font-size: 18px;
+  line-height: 23px;
+  color: $black;
+}
+
+.code {
+  // padding-top: 20px;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.buttons {
+  padding-top: 30px;
+}
+
+.error {
+  color: red;
+}
+
+.subtitle {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-left: 5px;
+  }
+}
+
+.description {
+  padding-top: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.list {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    font-size: 18px;
+    list-style: 22px;
+  }
+}
+
+.errorWindow {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorImg {
+  margin: 20px 0;
+  width: 150px;
+  height: 138px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.media {
+  border-top: 1px solid #cddcf3;
+  border-bottom: 1px solid #cddcf3;
+
+  ul {
+    padding: 0;
+
+    li {
+      padding-bottom: 10px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .mediaIcon {
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.spinnerBoxContainer {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 50px);
+  z-index: 300;
+  transform: translateX(-50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+
+  div {
+    border-color: $blue;
+    background-color: $blue;
+  }
+}
+
+.boxOne,
+.boxTwo,
+.boxThree,
+.boxFour {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  height: 20px;
+  width: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.boxOne {
+  animation: anim1 3s linear infinite;
+}
+.boxTwo {
+  animation: anim2 3s linear infinite;
+}
+.boxThree {
+  animation: anim3 3s linear infinite;
+}
+.boxFour {
+  animation: anim4 3s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: rotate(360deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: rotate(270deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+  }
+}
+@keyframes anim3 {
+  0% {
+    transform: rotate(180deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(-180deg);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes anim4 {
+  0% {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: rotate(-270deg);
+    transform-origin: bottom right;
+  }
+}
+
+.some {
+  padding: 0;
+}

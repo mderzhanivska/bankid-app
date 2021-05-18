@@ -1,0 +1,9 @@
+export { default as LangSwitcher } from './LangSwitcher'; 
+export { default as LoginForm } from './LoginForm'; 
+export { default as Error } from './Error'; 
+export { default as OTPForm } from './OTPForm'; 
+export { default as Header } from './Header'; 
+export { default as Spinner } from './Spinner'; 
+export { default as MobileApproveForm } from './MobileApproveForm'; 
+export { default as SocialLinks } from './SocialLinks'; 
+export { default as QRCode } from './QRCode'; 

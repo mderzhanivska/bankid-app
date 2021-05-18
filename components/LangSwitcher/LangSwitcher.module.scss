@@ -1,0 +1,77 @@
+@import "../../styles/colors";
+
+.switcher {
+  margin-right: 25px;
+  padding: 0;
+  position: relative;
+}
+
+.current {
+  padding: 0;
+  color: $black;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: capitalize;
+
+  &:hover {
+    cursor: pointer;
+
+    span {
+      transform: rotate(315deg);
+      transition: transform 0.3s linear;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 25%;
+  right: -20px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid $black;
+  border-right: 2px solid $black;
+
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  transform: rotate(135deg);
+  transition: transform 0.3s linear;
+}
+
+.list {
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  position: absolute;
+  background-color: $white;
+  border-radius: 6px;
+  border: 1px solid $white;
+}
+
+.list.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lang {
+  list-style: none;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    text-transform: capitalize;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fafafa;
+    }
+  }
+}
